@@ -78,3 +78,15 @@ set statusline+=%1*%y%*%*\              " file type
 set statusline+=%10(L(%l/%L)%)\         " line
 set statusline+=%2(C(%v/125)%)\         " column
 set statusline+=%P                      " percentage of file
+
+" functions
+function! Trim()
+    %s/\s*$//
+endfunction
+command! -nargs=0 trim :call Trim()
+
+" local overrides
+" add machine-specific options from a ~/.vimrc_local
+if filereadable(expand('~/.vimrc_local'))
+    source ~/.vimrc_local
+endif
