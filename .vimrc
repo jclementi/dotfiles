@@ -4,7 +4,6 @@ set shiftwidth=4
 set softtabstop=4
 set number
 set hlsearch
-set background=dark
 set hidden
 set ruler
 set wrap
@@ -12,9 +11,6 @@ set linebreak
 set dir=/tmp//
 set scrolloff=5
 set ignorecase
-
-" change plugin's mappings from messing with mine
-noremap k <Plug>(indexed-search-n)zv
 
 " keyboard remaps, use the home row for dvorak editing commands:
 " e - change
@@ -53,7 +49,17 @@ noremap K N
 noremap j t
 noremap J T
 
+" moving between vim panes
+noremap <C-h> <C-w>h
+noremap <C-t> <C-w>j
+noremap <C-n> <C-w>k
+noremap <C-n> <C-w>l
+
 filetype plugin indent on
+
+" define highlight schemes
+highlight ExtraWhitespace ctermbg=darkred
+highlight LineLengthError ctermbg=darkblue
 
 " highlight trailing whitespace
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
@@ -63,7 +69,7 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " highlight too-long lines
-autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%126v.*/
+autocmd BufRead,InsertEnter,InsertLeave * match LineLengthError /\%126v.*/
 highlight LineLengthError ctermbg=black guibg=black
 autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
 
@@ -83,7 +89,7 @@ set statusline+=%P                      " percentage of file
 function! Trim()
     %s/\s*$//
 endfunction
-command! -nargs=0 trim :call Trim()
+command! -nargs=0 Trim :call Trim()
 
 " local overrides
 " add machine-specific options from a ~/.vimrc_local
