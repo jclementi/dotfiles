@@ -101,4 +101,7 @@ if filereadable(expand('~/.vimrc_local'))
     source ~/.vimrc_local
 endif
 
-
+" vim-plug
+call plug#begin()
+Plug 'scrooloose/nerdtree'
+call plug#end()
