@@ -1,3 +1,7 @@
+" make sure terminal allows mapping <C-s> and <C-q>, which are mapped to
+" XON and XOFF control characters for legacy purposes on some terminals
+silent !stty -ixon
+
 syntax on
 set tabstop=4
 set shiftwidth=4
@@ -53,7 +57,7 @@ noremap J T
 noremap <C-h> <C-w>h
 noremap <C-t> <C-w>j
 noremap <C-n> <C-w>k
-noremap <C-n> <C-w>l
+noremap <C-s> <C-w>l
 
 filetype plugin indent on
 
@@ -96,3 +100,5 @@ command! -nargs=0 Trim :call Trim()
 if filereadable(expand('~/.vimrc_local'))
     source ~/.vimrc_local
 endif
+
+
