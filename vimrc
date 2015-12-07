@@ -104,4 +104,5 @@ endif
 " vim-plug
 call plug#begin()
 Plug 'scrooloose/nerdtree'
+Plug 'mileszs/ack'
 call plug#end()
