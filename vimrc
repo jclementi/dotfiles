@@ -15,6 +15,8 @@ set linebreak
 set dir=/tmp//
 set scrolloff=5
 set ignorecase
+set splitbelow
+set splitright
 
 " keyboard remaps, use the home row for dvorak editing commands:
 " e - change
@@ -58,6 +60,25 @@ noremap <C-h> <C-w>h
 noremap <C-t> <C-w>j
 noremap <C-n> <C-w>k
 noremap <C-s> <C-w>l
+
+" rearranging vim panes
+noremap <C-w>T <C-w>J
+noremap <C-w>N <C-w>K
+noremap <C-w>S <C-w>L
+
+" mapping for explorer mode
+" explorer mode sets up mappings in <buffer>, so we need to override them
+" after it's opened
+" netrw sets the filetype of the browser buffer to netrw
+augroup netrw_mapping
+	autocmd!
+	autocmd filetype netrw call NetRwMapping()
+augroup END
+
+function! NetRwMapping()
+	noremap <buffer> t j
+	noremap <buffer> b t
+endfunction
 
 filetype plugin indent on
 
