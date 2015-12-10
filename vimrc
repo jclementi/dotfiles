@@ -17,6 +17,7 @@ set scrolloff=5
 set ignorecase
 set splitbelow
 set splitright
+set numberwidth=3
 
 " keyboard remaps, use the home row for dvorak editing commands:
 " e - change
