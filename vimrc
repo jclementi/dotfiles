@@ -81,6 +81,10 @@ function! NetRwMapping()
 	noremap <buffer> b t
 endfunction
 
+" preferences for NetRw
+" sets the explorer to 'tree' view
+let g:netrw_liststyle = 4
+
 filetype plugin indent on
 
 " define highlight schemes
@@ -125,4 +129,5 @@ endif
 
 " vim-plug
 call plug#begin()
+Plug 'https://github.com/lambdatoast/elm.vim.git'
 call plug#end()
