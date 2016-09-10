@@ -130,4 +130,5 @@ endif
 " vim-plug
 call plug#begin()
 Plug 'https://github.com/lambdatoast/elm.vim.git'
+Plug 'https://github.com/digitaltoad/vim-pug.git'
 call plug#end()
