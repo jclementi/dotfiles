@@ -1,0 +1,26 @@
+plugins to consider adding:
+vim-ruby
+vim-classpath
+vim-go
+VimClojure
+vim-markdown
+command-t
+ack.vim
+vim-commadown
+vim-rails
+vim-clojure-static
+vim-fireplace
+bufexplorer
+align
+nerdtree
+vim-cucumber
+mako.vim
+vim-fugitive
+vim-javascript
+vim-protobuf
+vim-eindexed-search
+tabular
+vim-gradle
+vim-surround
+vim-ragtag
+puppet-syntax-vim
