@@ -1,0 +1,2 @@
+autocmd!
+set nonumber

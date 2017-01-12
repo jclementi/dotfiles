@@ -19,6 +19,8 @@ set splitbelow
 set splitright
 set numberwidth=3
 
+colorscheme apprentice
+
 " keyboard remaps, use the home row for dvorak editing commands:
 " e - change
 " u - insert
