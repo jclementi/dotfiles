@@ -133,4 +133,5 @@ endif
 call plug#begin()
 Plug 'https://github.com/lambdatoast/elm.vim.git'
 Plug 'https://github.com/digitaltoad/vim-pug.git'
+Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
