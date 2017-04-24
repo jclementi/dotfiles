@@ -102,9 +102,9 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " highlight too-long lines
-autocmd BufRead,InsertEnter,InsertLeave * match LineLengthError /\%126v.*/
-highlight LineLengthError ctermbg=black guibg=black
-autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
+" autocmd BufRead,InsertEnter,InsertLeave * match LineLengthError /\%126v.*/
+" highlight LineLengthError ctermbg=black guibg=black
+" autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
 
 " status line
 set laststatus=2
@@ -134,4 +134,5 @@ endif
 call plug#begin()
 Plug 'https://github.com/lambdatoast/elm.vim.git'
 Plug 'https://github.com/digitaltoad/vim-pug.git'
+Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
