@@ -139,4 +139,4 @@ command! -nargs=0 Trim :call Trim()
 "Plug 'JuliaEditorSupport/julia-vim'
 "call plug#end()
 
-let g:indexed_search_mapping=0
+let g:indexed_search_mappings=0
