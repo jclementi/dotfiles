@@ -4,9 +4,9 @@ silent !stty -ixon
 
 syntax on
 set backspace=indent,eol,start
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set number
 set hlsearch
 set hidden
@@ -124,19 +124,17 @@ function! Trim()
 endfunction
 command! -nargs=0 Trim :call Trim()
 
-
-
 " local overrides
 " add machine-specific options from a ~/.vimrc_local
-"if filereadable(expand('~/.vimrc_local'))
-"    source ~/.vimrc_local
-"endif
+if filereadable(expand('~/.vimrc_local'))
+    source ~/.vimrc_local
+endif
 
 " vim-plug
-"call plug#begin()
-"Plug 'https://github.com/lambdatoast/elm.vim.git'
-"Plug 'https://github.com/digitaltoad/vim-pug.git'
-"Plug 'JuliaEditorSupport/julia-vim'
-"call plug#end()
+call plug#begin()
+Plug 'https://github.com/lambdatoast/elm.vim.git'
+Plug 'https://github.com/digitaltoad/vim-pug.git'
+Plug 'JuliaEditorSupport/julia-vim'
+call plug#end()
 
-let g:indexed_search_mappings=0
+"let g:indexed_search_mappings=0
