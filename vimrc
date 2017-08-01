@@ -5,6 +5,7 @@ silent !stty -ixon
 syntax on
 set backspace=indent,eol,start
 set tabstop=2
+set expandtab
 set shiftwidth=2
 set softtabstop=2
 set number
@@ -90,6 +91,8 @@ let g:netrw_liststyle = 4
 
 filetype plugin indent on
 
+let g:indexed_search_mappings=0
+
 " define highlight schemes
 highlight ExtraWhitespace ctermbg=darkred
 highlight LineLengthError ctermbg=darkblue
@@ -137,4 +140,4 @@ Plug 'https://github.com/digitaltoad/vim-pug.git'
 Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
 
-"let g:indexed_search_mappings=0
+
